@@ -5,4 +5,10 @@
     <string name="list_of_list">LIST OF LIST</string>
     <string name="india">INDIA</string>
     <string name="new_delhi">NEW DELHI</string>
+    <string name="confirm_reset">confirm reset</string>
+    <string name="confirm_reset_message">are you sure</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="city_name">City Name</string>
+    <string name="country_name">Country Name</string>
 </resources>

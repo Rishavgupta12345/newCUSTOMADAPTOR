@@ -5,9 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 
-class CityAdapter(val cityData: Array<City>) : BaseAdapter() {
+class CityAdapter(val cityData: MutableList<City>) : BaseAdapter() {
     override fun getCount(): Int {
         return cityData.size
     }
@@ -44,12 +43,12 @@ class CityAdapter(val cityData: Array<City>) : BaseAdapter() {
             cityCountry.text = getItem(position).country
             cityName.text = getItem(position).name
 
-            if (city.favorite) {
-                cityView.setBackgroundColor(
-                    ContextCompat.getColor(cityView.context, R.color.teal_200))
-            } else {
-                cityView.setBackgroundColor(ContextCompat.getColor(cityView.context, R.color.white))
-            }
+//            if (city.favorite) {
+//                cityView.setBackgroundColor(
+//                    ContextCompat.getColor(cityView.context, R.color.teal_200))
+//            } else {
+//                cityView.setBackgroundColor(ContextCompat.getColor(cityView.context, R.color.white))
+//            }
 
             return cityView
         }

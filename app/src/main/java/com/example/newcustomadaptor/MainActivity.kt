@@ -1,5 +1,6 @@
 package com.example.newcustomadaptor
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -61,12 +62,13 @@ class MainActivity : AppCompatActivity() {
         cityData.sortBy { it.name }
     }
 
+    @SuppressLint("InflateParams")
     private fun addCity() {
         val builder = AlertDialog.Builder(this)
         val inflater = this.layoutInflater
         val dialogView: View = inflater.inflate(R.layout.city_add,null)
-        val countryName = dialogView.findViewById<EditText>(R.id.city_country)
-        val cityName = dialogView.findViewById<EditText>(R.id.city_name)
+        val countryName = dialogView.findViewById<EditText>(R.id.city_name_label)
+        val cityName = dialogView.findViewById<EditText>(R.id.country_name_label)
         with(builder){
             setView(dialogView)
             setTitle("Add city")
